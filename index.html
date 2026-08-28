@@ -76,6 +76,15 @@ body{
 .masthead::after{
   content:"";position:absolute;left:16mm;bottom:-3px;width:34mm;height:3px;background:var(--accent);
 }
+.masthead-in{display:flex;gap:12mm;align-items:flex-start;justify-content:space-between}
+.identity{min-width:0;flex:1}
+.portrait{
+  flex:0 0 auto;width:34mm;height:34mm;border-radius:50%;overflow:hidden;
+  background:var(--wash);
+  box-shadow:0 0 0 1px var(--rule), 0 0 0 4px #fff, 0 0 0 5px var(--accent);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
 .name{
   font-family:'Fraunces',Georgia,serif;
   font-size:34pt;line-height:1.02;font-weight:700;
@@ -174,7 +183,10 @@ section:last-child{margin-bottom:0}
   body{font-size:11pt}
   .sheet{width:100%;margin:0;box-shadow:none}
   .masthead{padding:26px 20px 18px}
+  .masthead-in{flex-direction:column-reverse;align-items:flex-start;gap:16px}
+  .portrait{width:92px;height:92px}
   .name{font-size:28pt}
+  .tagline{max-width:none}
   .grid{grid-template-columns:1fr;gap:0;padding:20px 20px 34px}
   .col-aside{border-left:0;border-top:1px solid var(--rule);padding-left:0;padding-top:20px;margin-top:8px}
   .entry-top{flex-direction:column;gap:0}
@@ -215,9 +227,14 @@ section:last-child{margin-bottom:0}
 <article class="sheet">
 
   <header class="masthead">
+   <div class="masthead-in">
+    <div class="identity">
     <h1 class="name">Asop</h1>
     <div class="role">Management Information System Manager</div>
     <p class="tagline">Proactive and adaptable professional experienced in collaborating with cross-functional teams to develop and implement technology-driven initiatives, leveraging analytical skills and a problem-solving mindset to achieve project goals efficiently.</p>
+    </div>
+    <figure class="portrait"><img src="photo.jpg" alt="Portrait of Asop" width="500" height="500"></figure>
+   </div>
     <div class="contacts">
       <span><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:asopkarawang@gmail.com">asopkarawang@gmail.com</a></span>
       <span><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><a href="tel:+6282125093077">+62 821-2509-3077</a></span>
